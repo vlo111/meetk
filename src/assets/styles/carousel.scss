@@ -1,0 +1,186 @@
+
+@mixin clearfix() {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+
+  @mixin transition($transition...) {
+    @if length($transition) == 0 {
+      $transition: $transition-base;
+    }
+  
+    @if length($transition) > 1 {
+      @each $value in $transition {
+        @if $value == null or $value == none {
+          @warn "The keyword 'none' or 'null' must be used as a single argument.";
+        }
+      }
+    }
+  
+    @if $enable-transitions {
+      @if nth($transition, 1) != null {
+        transition: $transition;
+      }
+  
+      @if $enable-prefers-reduced-motion-media-query and nth($transition, 1) != null and nth($transition, 1) != none {
+        @media (prefers-reduced-motion: reduce) {
+          transition: none;
+        }
+      }
+    }
+  }
+
+
+  .carousel {
+    position: relative;
+  }
+  
+  .carousel.pointer-event {
+    touch-action: pan-y;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: visible !important;
+    @include clearfix();
+  }
+  
+  .carousel-item {
+    position: relative;
+    display: none;
+    flex-wrap: wrap;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out;
+  }
+  
+  
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+  }
+  
+  .carousel-item-next:not(.carousel-item-left),
+  .active.carousel-item-right {
+    transform: translateX(100%);
+  }
+  
+  .carousel-item-prev:not(.carousel-item-right),
+  .active.carousel-item-left {
+    transform: translateX(-100%);
+  }
+  
+  .carousel-fade {
+    .carousel-item {
+      opacity: 0;
+      transition-property: opacity;
+      transform: none;
+    }
+  
+    .carousel-item.active,
+    .carousel-item-next.carousel-item-left,
+    .carousel-item-prev.carousel-item-right {
+      z-index: 1;
+      opacity: 1;
+    }
+  
+    .active.carousel-item-left,
+    .active.carousel-item-right {
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0s 0.6s;
+    }
+  }
+  
+  
+  //
+  // Left/right controls for nav
+  //
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 50px;
+        color: #fff;
+        text-align: center;
+        opacity: 0.5;
+        transition: opacity 0.15s ease;
+    }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-control-prev,
+    .carousel-control-next {
+      transition: none;
+    }
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-prev:focus,
+  .carousel-control-next:hover,
+  .carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+  }
+
+  .carousel-control-prev {
+    left: -15px;
+  }
+  
+  .carousel-control-next {
+    right: -15px;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0; // override <ol> default
+    // Use the .carousel-control's width as margin so we don't overlay those
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+  
+    li {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #7166f8;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: 0.5;
+        transition: opacity 0.6s ease;
+        border-radius: 50%;
+    }
+  
+    .active {
+      opacity: 1;
+    }
+  }
+ 
+  

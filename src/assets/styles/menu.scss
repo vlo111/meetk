@@ -1,0 +1,263 @@
+.menu {
+  position: fixed;
+  width: 200px;
+  background: #ffffff;
+  height: 92%;
+  top: 80px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  background-color: #F9F9F9;
+
+  .containerMenu {
+    width: 200px;
+
+    .collapse {
+      display: flex;
+      margin: 13px 15px;
+      padding: 15px 15px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #727272;
+      align-items: center;
+      border-radius: 3px;
+      height: 40px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      .fa-caret-right {
+        position: absolute;
+        right: 20px;
+        top: 76px;
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: #EFEFEF;
+        color: #585858;
+        border: none;
+      }
+
+      .sidebar_text {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    .collapse_over {
+      color: white;
+      background: #1CC5DC;
+    }
+  }
+
+  .dropdown-addNew, .dropdown-node, .create_label {
+    position: fixed;
+    left: 208px;
+    width: 140px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 33px rgb(0 0 0 / 25%);
+    border-radius: 3px;
+    top: 150px;
+    font-size: 17px;
+    height: 130px;
+
+    li {
+      position: relative;
+      top: 5px;
+      color: #727272;
+      padding: 10px 30px;
+      cursor: pointer;
+      font-weight: normal;
+      display: flex;
+      height: 40px;
+
+      &:hover {
+        background: #EFEFEF;
+        color: #585858;
+       .lablMenu{
+        color: #2FE6FF;
+         circle, path {
+         stroke: #585858;
+         }
+       }
+      }
+    }
+
+    .selected {
+      color: white;
+      background: #1CC5DC;
+    }
+
+    i {
+      margin-top: 3px;
+      margin-left: 20px;
+    }
+  }
+
+  .dropdown-node, .create_label {
+    left: 355px;
+    width: 190px;
+    height: 210px;
+    top: 170px;
+
+    li {
+      top: 5px;
+      padding: 7px 20px;
+      height: 40px;
+    }
+  }
+
+  .create_label {
+    width: 160px;
+    height: 130px;
+    top: 205px;
+    li {
+      padding: 7px 20px;
+
+      i {
+        margin-left: 20px;
+      }
+    }
+
+    span {
+      padding-left: 8px;
+    }
+  }
+}
+
+.closed_menu {
+  width: 70px;
+
+  .containerMenu {
+    width: 90%;
+
+    .collapse {
+      justify-content: center;
+      margin: 13px 10px;
+
+      .fa-caret-right {
+        position: sticky;
+        margin-left: 8px;
+      }
+
+      .sidebar_text {
+        display: none;
+      }
+
+      i {
+        margin-right: 0;
+      }
+    }
+
+    .collapse_over {
+      width: 190px;
+      background-color: #ffffff;
+      color: #7166F8;
+      box-shadow: 0 0 6px 2px rgb(136 130 209 / 37%);
+      border: none;
+      justify-content: flex-start;
+      padding: 11px 17px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      .sidebar_text {
+        display: contents;
+      }
+    }
+
+  }
+
+}
+.searchMenuNodes{
+    left: 174px;
+    width: 500px;
+    min-height: auto;
+    max-height: 91vh;
+    top: 48px !important;
+
+  .searchField{
+    background-color: initial;
+  }
+  .searchFieldCheckBox{
+  background-color: white;
+  }
+  .searchFieldCheckBoxList{
+    top: 25px !important;
+  }
+  .chooseSearchFields{
+    padding: 0 24px;
+  }
+  .list {
+    margin: 1px 25px 0px;
+    width: 90%;
+
+      .typeText{
+        color: #757575 !important;
+        font-weight: 800 !important;
+      }
+  }
+    .nodeSearch{
+      margin-right: auto !important;
+      padding-left: 25px !important;
+
+    }
+    .close{
+      position: absolute;
+    left: 100px;
+    top: -11px;
+    }
+    .searchBoxInside{
+      border: none !important;
+    }
+    .chooseSearchFields{
+      color: #1CC5DC !important;
+      font-size: 12px;
+    }
+}
+
+
+
+.ghModalEditSearch .list .item .ghButton {
+.name{
+  font-size: 16px !important;
+  color: #1CC5DC;
+font-weight: 400;
+width: 40% !important;
+padding-left: 0 !important;
+}
+.type{
+  margin-left: 5px;
+  div{
+    width: 307px;
+  }
+}
+.contentWrapper{
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+
+}
+.tabButton{
+  display: none !important;
+}
+.nodeIcon{
+  display: inline-flex;
+}
+.item{
+  margin-left: 0 !important;
+
+}
+}
+.searchButtonClosed:disabled,
+.searchButtonClosed[disabled]{
+  display: none;
+}
+#searchMenuNodes:focus-visible {
+  outline: none;
+}
+
+

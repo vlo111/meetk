@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66" height="58" viewBox="0 0 66 58">
+  <g id="Compare_nodes" data-name="Compare nodes" transform="translate(-679 -401)">
+    <g id="Rectangle_792" data-name="Rectangle 792" transform="translate(679 401)" fill="#fff" stroke="#717ea0" stroke-width="2">
+      <rect width="41" height="41" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="39" height="39" rx="9" fill="none"/>
+    </g>
+    <g id="Rectangle_793" data-name="Rectangle 793" transform="translate(704 418)" fill="#fff" stroke="#717ea0" stroke-width="2">
+      <rect width="41" height="41" rx="10" stroke="none"/>
+      <rect x="1" y="1" width="39" height="39" rx="9" fill="none"/>
+    </g>
+    <g id="Group_856" data-name="Group 856" transform="translate(-3)">
+      <path id="Path_475" data-name="Path 475" d="M-215.031-756.377l2.98-3.958a1.04,1.04,0,0,0-.831-1.666h-5.961a1.04,1.04,0,0,0-.831,1.666l2.98,3.958A1.04,1.04,0,0,0-215.031-756.377Z" transform="translate(1458.65 213.299) rotate(-90)" fill="#717ea0"/>
+      <path id="Path_476" data-name="Path 476" d="M-3792.457,11830.16h9.672" transform="translate(4484.271 -11401)" fill="none" stroke="#717ea0" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Group_857" data-name="Group 857" transform="translate(1.626 0.861)">
+      <path id="Path_478" data-name="Path 478" d="M-215.031-756.377l2.98-3.958a1.04,1.04,0,0,0-.831-1.666h-5.961a1.04,1.04,0,0,0-.831,1.666l2.98,3.958A1.04,1.04,0,0,0-215.031-756.377Z" transform="translate(-48.463 650.022) rotate(90)" fill="#717ea0"/>
+      <path id="Path_477" data-name="Path 477" d="M-3792.457,11830.16h9.672" transform="translate(-3074.083 12264.32) rotate(180)" fill="none" stroke="#717ea0" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

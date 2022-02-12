@@ -1,0 +1,957 @@
+@media screen and  (max-width: 1800px){
+  .homeWithUser{
+    .content{
+      .graphsList .graphsItem{
+        grid-template-columns: 15% 42% 20% 19% 4% !important;
+      }
+    }
+  }
+  .ghModalMedia {
+    left: 3% !important;
+
+    &#fullWidth {
+      left: 15% !important;
+    }
+  }
+  #header{
+    grid-template-columns: 10% auto 6% 16% 5%;
+  }
+  .homePage .content{
+    .homPageHeader{
+     padding-top: 3.1%;
+    }
+  }
+  #header{
+    grid-template-columns: 10% auto 6% 16% 5%;
+  }
+  .homePage .content{
+    .homPageHeader{
+     padding-top: 3.1%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1699px) {
+  .account-edit{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gainsboro;
+
+    cursor: pointer;
+  }
+  .account-edit i{
+    font-size: 33px;
+    margin: 21px 25px auto;
+    cursor: pointer;
+    color: blue;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .barContainer {
+    .recharts-surface {
+      width: 500px;
+    }
+  }
+
+  .homeWithUser{
+    .content{
+      .graphsList .graphsItem{
+        grid-template-columns: 19% 36% 22% 19% 4% !important;
+      }
+    }
+  }
+  .ghModalMedia {
+    left: 6% !important;
+
+    &#fullWidth {
+      left: 17% !important;
+    }
+  }
+  #header-on-graph{
+    .container{
+      .user .signOut{
+        width: 50%;
+      }
+    }
+  }
+  .homePage .content{
+    .homPageHeader{
+     padding-top: 3.2%;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .barContainer {
+    .recharts-surface {
+      width: 450px !important;
+    }
+  }
+  #header{
+    grid-template-columns: 11% auto 6% 18% 5%;
+  }
+  #accountDropDown .dropdown{
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+
+  .barContainer {
+    .recharts-surface {
+      width: 400px !important;
+    }
+  }
+
+  .homeWithUser .content .graphsList .graphsItem {
+    grid-template-columns: 19% 34% 21% 19% 7% !important;
+ }
+  .ghModalMedia {
+    left: 6% !important;
+    width: 46% !important;
+
+    &#fullWidth {
+      left: 17% !important;
+      width: 82% !important;
+    }
+  }
+  #header{
+    grid-template-columns: 11% auto 6% 20% 5% !important;
+  }
+  .homePage .content{
+    .homPageHeader{
+     padding-top: 4%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1600px){
+  .homeWithUser{
+    .content{
+      .graphsList .graphsItem{
+        grid-template-columns: 25% 41% 14% 15% 5% !important;
+        &:hover .buttonHidden .btn-edit {
+          margin-right: 7px;
+          margin-left: 7px;
+      }
+      }
+  }
+}
+  .searchNodes {
+    left: 106px;
+  }
+  .ghModalMedia {
+    .mediaHeader{
+      .showCheck{
+        padding: 10px;
+      }
+
+    }
+  }
+  #header{
+    grid-template-columns: 11% auto 6% 24% 5% !important;
+
+    .graphSearch input{
+      width: 270px;
+    }
+  }
+}
+@media screen and (max-width: 1400px){
+  #header-on-graph .container, #header-on-view-graph .container{
+    grid-template-columns: auto 40% auto auto auto auto auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .ghModalSearch {
+    width: 40% ;
+  }
+  .searchNodes {
+    right: -11% !important;
+    .searchField .searchBox .searchBoxInside .nodeSearch {
+      padding-left: 0;
+      min-width: 1px;
+    }
+  }
+
+
+  .section2 .ghButton2, .section2 .ghSelect {
+    position:initial;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .scienceForm form {
+    flex-direction: column;
+    height: 10em;
+    max-height: 10em;
+  }
+  .scienceForm input, .scienceForm button{
+    line-height: 1em;
+    border-radius: 2em;
+    border: none;
+    padding: 0 2em;
+    width: 100%;
+  }
+  .scienceAuthorInput {
+    flex:1;
+  }
+  .scienceTitleInput {
+    flex:1;
+  }
+  .scienceForm button {
+    flex: 1;
+  }
+  .profile_info div.text {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .ghModalSearch {
+    width: 70%;
+  }
+  .searchNodes .searchField .searchBox .searchBoxInside .searchFieldCheckBox {
+    width: 5em;
+     .searchFieldCheckBox {
+      width: 5em;
+    }
+  }
+  .scienceResultsList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: .6em 0;
+    justify-content: center;
+  }
+  .scienceCheckBox {
+    order: 1;
+    margin-left: .6em
+  }
+  .scienceCreateNodeButton {
+    order: 3;
+    display: flex;
+    justify-content: space-around;
+  }
+  .scienceArticleData {
+    min-width: 80%;
+    order: 2;
+    margin-left: .5em;
+  }
+  .scienceCreateNodeButton button {
+    max-width: 50%;
+  }
+  .scienceArticleDescription {
+    height: 11em;
+    max-height: 11em;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile_desc .img {
+    width:100px;
+    height: 100px;
+  }
+
+  .profile_desc p {
+      font-size: 12px;
+      margin-bottom: 20px;
+  }
+
+  .profile .profile_desc {
+    width:initial;
+  }
+
+  .profileEdit .profile_desc {
+    width:310px;
+
+  }
+  .profile_info {
+    margin:0 auto;
+    margin-left: -36px;
+    margin-right: -30px;
+    .colm {
+      padding:0
+    }
+  }
+
+  .profile_info div.number {
+    font-size: 30px;
+  }
+
+  .profile_desc h1 {
+    font-size: 25px;
+  }
+
+  .user_address_info p, .edit_profile > div:last-child {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .user_address_info h1 {
+    font-size: 20px;
+  }
+  .social-img {
+    margin-top: 14px;
+      img {
+        margin-right: 17px;
+        width: 18px;
+    }
+  }
+  .interest {
+    font-size: 12px;
+  }
+
+  .section2 > div {
+    margin-bottom: 30px;
+  }
+  .section2 .ghButton2{
+    margin-bottom: 25px;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .profile_desc {
+    text-align:center;
+    align-items: center;
+    p {
+      max-width: 400px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .profileEdit .interest-box > div:first-child {
+    min-width: 130px;
+  }
+
+  .profileEdit .interest-box .interest {
+    min-width: 130%;
+  }
+  .profileEdit .interest {
+    font-size:20px;
+  }
+
+  .profile_info {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .section2 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0px;
+    margin-top: 60px;
+  }
+
+  .friends .friend_box {
+    padding: 0 45px;
+    justify-content: space-between;
+  }
+
+  .friends > div:first-child {
+    margin-bottom: 30px;
+    padding: 0 45px;
+  }
+
+  .interest {
+    justify-content: center;
+     margin-top: 20px;
+  }
+  .social-img {
+    justify-content: center;
+  }
+  .friends-requests > div:first-child {
+    padding-left: 30px;
+  }
+  .section2 .ghSelect  {
+    margin: 25px auto;
+  }
+
+}
+
+@media (min-width: 576px){
+  .colm-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .friends-requests .friend_box {
+      padding: 5px 70px;
+   }
+
+   .friends-requests > div:first-child {
+    padding-left: 85px;
+  }
+  .carousel-control-prev {
+    left: -6px;
+  }
+
+  .carousel-control-next {
+    right: -6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .colm-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .colm-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .profile.newVersion {
+    padding:45px;
+  }
+
+  .friends-requests .friend_box {
+      width:50%;
+      padding:  0 0 0 22px;
+  }
+  .friends-requests > div:first-child {
+    padding-left: 40px;
+  }
+  .carousel-control-prev {
+    left: -25px;
+  }
+
+  .carousel-control-next {
+    right: -25px;
+  }
+
+
+}
+
+@media (min-width: 992px) {
+  .friends-requests .friend_box {
+    width:50%;
+    padding:  0 0 0 70px;
+  }
+  .friends-requests > div:first-child {
+    padding-left: 85px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile.newVersion,.profileEdit {
+    margin: 80px auto;
+    width:75%;
+    
+  }
+
+  
+  .friends-requests .friend_box:nth-child(odd) {
+    padding: 0px 35px 0 0px;
+  }
+  .friends-requests .friend_box:nth-child(even) {
+    padding: 0px 0px 0 35px;
+  }
+  .carousel-control-prev {
+    justify-content: flex-start;
+  }
+
+  .carousel-control-next {
+    justify-content: flex-end;
+  }
+
+  .carousel-control-prev {
+    left: -60px;
+  }
+
+  .carousel-control-next {
+    right: -60px;
+  }
+
+  .friends-requests > div:first-child {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .profile.newVersion,.profileEdit {
+    margin: 80px auto;
+    width:70%;
+  }
+
+  .friends  .friend_box  button.btn-link{
+      margin-left: 70px;
+  }
+
+
+}
+
+@media (min-width: 1800px) {
+  .profile.newVersion,.profileEdit {
+    margin: 80px auto;
+    width:60%;
+    height: 800px;
+  }
+  .homePage .content{
+     .homPageHeader{
+      padding-top: 2.6%;
+     }
+     .graphsCard{
+      top: 140px;
+      }
+  }
+}
+
+@media (max-width: 10px) {
+  .wikiModal .Wiki input {
+
+    width:auto;
+  }
+}
+
+// media for height
+@media only screen and (max-height: 900px) {
+
+  #Tab {
+    .nodeFullContent .nodeTabs .contentWrapper {
+
+      .no-tabs .no-tab-content {
+        .header {
+          .description {
+            font-size: 20px;
+          }
+
+          * {
+            margin-bottom: 0;
+            font-size: 20px;
+          }
+        }
+
+        .footer {
+          margin-top: 10px;
+
+          svg {
+            margin-bottom: 0;
+            width: 25px;
+          }
+
+          .create-tab {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+      }
+
+      .content {
+        height: 250px;
+      }
+    }
+
+    .connectionDetails {
+      margin-top: 0;
+
+      .row {
+        details {
+          margin: 10px 0;
+        }
+
+        .list .item {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .compareContent {
+
+    .graphCompareData {
+      max-height: 620px;
+    }
+
+    .compare-footer {
+      top: 604px !important;
+    }
+  }
+}
+@media screen and (max-height: 700px) {
+  .ghModalMedia {
+     top:80px !important;
+     max-height: 88% !important;
+
+    &#fullWidth{
+      top:80px !important;
+    }
+  }
+}
+@media (max-height: 750px) {
+  .menu {
+    overflow-y: scroll;
+    height: 91vh;
+
+}
+  .menu .containerMenu .collapse:hover{
+  overflow: hidden;
+  }
+  .helpName{
+    overflow-x: scroll;
+    width: 31%;
+  }
+  .helpResultText {
+    overflow: scroll;
+    position: relative;
+    top: 60px;
+    height: 50% ;
+    max-height: 235px !important;
+}
+.react-tabs{
+margin-top: -5px;
+}
+.homeWithUser .content .empty{
+  top: -10px;
+}
+
+
+}
+@media (max-height:910px) {
+  .react-tabs__tab-panel{
+    height: 90%;
+  }
+
+}
+@media (max-height: 899px) {
+  
+  .LegendExplorer .connections, .nodes{
+   
+    max-height: 40% !important;
+  }
+  .homeWithUser .content .empty{
+    top: 60px;
+  }
+}
+@media (max-height:850px) {
+
+.help_img {
+  overflow: scroll;
+  height: auto;
+  max-height: 226px;
+}
+.helpResultText{
+  overflow: scroll;
+  position: relative;
+  top: 60px;
+  height: 50%;
+  max-height: 400px;
+
+}
+.shotcouts{
+  height: 100%;
+  max-height: 86% !important;
+}
+  .compareContent .compare-footer {
+    top: 500px!important;
+  }
+
+  .compareContent .compare-footer {
+    top: 500px!important;
+  }
+}
+@media (max-height: 830px) {
+  .dropdown .connections, .nodes{
+  
+  max-height: 40% !important;
+  }
+  .LegendExplorer .connections, .nodes{
+   
+    max-height: 40% !important;
+  }
+  .homeWithUser .content .empty{
+    top: 10px;
+  }
+}
+
+
+// sigin forget
+
+@media (max-width: 1350px) {
+  .signPage{
+    .signin_page{
+    grid-template-columns: repeat(1,1fr);
+    .singIn_img img{
+      height: 400px;
+      position: relative;
+      top: 30px;
+    }
+    .singIn_form{
+      display: grid;
+      justify-self: center;
+      min-width: 500px;
+      position: relative;
+      top: -60px;
+    }
+    }
+    .forgot_password {
+    .forgot_img{
+      img{
+        height: 300px;
+      }
+     }
+    }
+  }
+  #header-on-graph{
+    .container{
+      .user .signOut{
+        width: 63%;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .signPage{
+    .signin_page{
+    grid-template-columns: repeat(1,1fr);
+    .singIn_img img{
+      height: 350px;
+      position: relative;
+      top: 40px;
+    }
+    .singIn_form{
+      position: relative;
+      top: -60px;
+    }
+    }
+    .forgot_password {
+    .forgot_img{
+      img{
+        height: 280px;
+      }
+     }
+    }
+ }
+}
+@media (max-width: 1024px) {
+  .signPage{
+     .signin_page{
+    grid-template-columns: repeat(1,1fr);
+    .singIn_img img{
+      height: 300px;
+      position: relative;
+      top: 40px;
+    }
+    .singIn_form{
+      position: relative;
+      top: -60px;
+    }
+     }
+     .forgot_password {
+    .forgot_img{
+      img{
+        height: 270px;
+      }
+     }
+    .forgot_form{
+      .SigninAuthForm{
+        width: 400px;
+      }  }
+     }
+     .authForm {
+       margin-left: 25%;
+
+       .ghInput{
+         height: 40px;
+       }
+       .ghFormFieldPassword .icon{
+         top: 6px;
+       }
+     }
+  }
+  #header{
+    grid-template-columns: 10% auto 9% 30% 9% !important;
+
+    .graphSearch input{
+      width: 210px;
+    }
+  }
+  #accountDropDown .dropdown{
+    right: 18%;
+  }
+}
+@media (max-width: 860px) {
+  .signPage{
+    .signin_page{
+    grid-template-columns: repeat(1,1fr);
+    padding: 160px 0px;
+
+    .singIn_form{
+      position: relative;
+      order:2;
+      .ghInput input{
+        height: 45px;
+      }
+    }
+    }
+    .forgot_password {
+    grid-template-rows: auto auto auto;
+    .forgot_img{
+      order: 2;
+      img{
+        height: 250px;
+      }
+     }
+    .forgot_form{
+      .SigninAuthForm{
+        width: 380px;
+        top: 10px;
+      }
+     }
+    }
+    .authForm {
+      margin-left: 20%;
+    }
+ }
+ #header{
+  grid-template-columns: 10% auto 10% 32% 6% !important;
+  .graphSearch input{
+    width: 190px;
+  }
+}
+#accountDropDown .dropdown{
+  right: 16%;
+}
+}
+@media (max-width: 760px) {
+  .signPage{
+    .ghFormFieldPassword .icon{
+      top:3px !important;
+     }
+    .signin_page{
+    grid-template-columns: repeat(1,1fr);
+    padding: 207px 0px;
+    position: relative;
+    top: -60px;
+
+    .singIn_form{
+      position: relative;
+      order:2;
+      min-width: 280px;
+      .ghInput input{
+        height: 36px;
+      }
+      .ghButton.alt{
+        height: 36px;
+        margin-top: 35px;
+      }
+    }
+    }
+    .forgot_password {
+    .forgot_img{
+      position: relative;
+      top: -100px;
+     }
+    .forgot_form{
+      .SigninAuthForm{
+        width: 240px;
+        .ghFormField{
+          input{
+            height: 40px;
+            font-size: 14px;
+          }
+          .error{
+            font-size: 14px;
+          }
+        }
+        h4{
+          font-size: 19px;
+        }
+      }
+     }
+    }
+    .authForm {
+      margin-left: 13%;
+      min-width: auto;
+      h1{
+        font-size: 36px;
+      }
+    }
+ }
+ #header{
+  grid-template-columns: 15% auto 9% 37% 7% !important;
+  .graphSearch input{
+    width: 165px;
+  }
+ }
+}
+
+//  SignUP Media
+
+@media (min-width: 1920px) {
+  .SignUpAuthform {
+    top: 160px;
+  }
+    #header {
+      grid-template-columns: 10% auto 6% 14% 4%;
+    }
+    .SigninAuthForm {
+      padding: 0;
+      margin: 160px 0;
+      left: 0;
+    }
+    .switchSignInMode {
+      position: relative;
+      top: 0;
+    }
+}
+@media (max-width: 1024px) {
+  .signUp {
+    background-image: none !important;
+  }
+  .SignUpRight {
+    left: 25%;
+   
+
+    .SignUpAuthform {
+      position: relative;
+      top: 20px;
+      left: 0;
+      width: 360px;
+      .error{
+        font-size: 11px;
+        width: 200px;
+      }
+    }
+
+    .getstart {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    h1 {
+      position: relative;
+      font-size: 22px;
+      font-weight: 400;
+      top: 30px;
+    }
+
+    h4 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .logo {
+      position: inherit;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .SignUpRight {
+      .getstart {
+        font-size: 22px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 27px;
+        font-weight: 700;
+      }
+
+     input{
+       width: 120px;
+     }
+    }
+  }
+}
+

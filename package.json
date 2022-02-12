@@ -1,0 +1,113 @@
+{
+  "name": "graphs",
+  "version": "0.1.2",
+  "private": true,
+  "jest": {
+    "transformIgnorePatterns": [
+      "src/node_modules/(?!@sapper)"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
+    "axios": "^0.21.1",
+    "bowser": "^2.11.0",
+    "classnames": "^2.2.6",
+    "d3": "^6.6.0",
+    "enzyme": "^3.11.0",
+    "fetch-timeout": "0.0.2",
+    "google-maps-react": "^2.0.6",
+    "history": "^5.1.0",
+    "jodit": "^3.4.29",
+    "jodit-react": "^1.0.68",
+    "js-file-download": "^0.4.12",
+    "lodash": "^4.17.20",
+    "memoize-one": "^5.1.1",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "object-to-formdata": "^4.1.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.14.0",
+    "randomcolor": "^0.6.2",
+    "rc-switch": "^3.2.2",
+    "rc-tooltip": "5.0.2",
+    "react": "17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-bootstrap": "^1.3.0",
+    "react-bootstrap-typeahead": "^5.1.2",
+    "react-clear-cache": "^1.4.12",
+    "react-color": "^2.19.3",
+    "react-cytoscapejs": "^1.2.1",
+    "react-datasheet": "^1.4.9",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^6.2.4",
+    "react-editable-label": "^1.3.2",
+    "react-helmet": "^6.1.0",
+    "react-image-crop": "^8.6.9",
+    "react-input-range": "^1.3.0",
+    "react-lazyload": "^3.2.0",
+    "react-lines-ellipsis": "^0.14.1",
+    "react-modal": "^3.11.2",
+    "react-notification-timeline": "0.0.9",
+    "react-paginate": "^6.5.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^4.1.0",
+    "react-sortable-hoc": "^2.0.0",
+    "react-tabs": "^3.2.2",
+    "react-test-renderer": "^17.0.2",
+    "react-toastify": "^6.1.0",
+    "react-virtualized": "^9.22.3",
+    "react-window": "^1.8.6",
+    "recharts": "^2.0.9",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "socket.io-client": "^2.3.1",
+    "string-strip-html": "6.3.0",
+    "uuidv4": "^6.2.11",
+    "web-vitals": "^1.1.0",
+    "xml2js": "^0.4.23"
+  },
+  "scripts": {
+    "prod": "react-scripts start",
+    "dev": "PORT=3002 react-scripts start",
+    "start": "react-scripts start",
+    "svg": "svgo -f src/assets/images/icons --config='{\"plugins\":[{\"removeViewBox\":false,\"removeAttrs\":{\"attrs\":\"data.*\"}},{\"removeNonInheritableGroupAttrs\":true},{\"collapseGroups\":true}]}'",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build && node build.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/.bin/eslint src/. --config .eslintrc.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not ie < 11",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "node-sass": "^5.0.0",
+    "react-scripts": "^4.0.3"
+  }
+}

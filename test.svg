@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="nodeCreate" width="400" height="223" viewBox="0,0,400,223">
+  
+    <g class="wrapper" transform-origin="top left" data-scale="3.1631205673758864" data-x="-1492.2695035460993"
+       data-y="-993.2198581560283"
+       transform="translate(-1492.2695035460993, -993.2198581560283), scale(3.1631205673758864)">
+        <g class="labels">
+            <rect class="labelsBoard" fill="transparent" width="100%" height="100%"></rect>
+        </g>
+        <g class="directions"></g>
+        <g class="links"></g>
+        <g class="linkText"></g>
+        <g class="nodes">
+            <g class="node circle" data-i="0" transform="translate(535, 336)">
+                <circle r="12" fill="#1f77b4" stroke="white" stroke-width="10"></circle>
+                <text y="27" font-size="16.5" font-family="Open Sans" dominant-baseline="middle" stroke="white"
+                      fill="#0D0905" text-anchor="middle" stroke-width="0">asdasdasd
+                </text>
+            </g>
+        </g>
+        <g class="icons"></g>
+        <defs>
+            <filter id="labelShadowFilter" x="-50%" y="-50%" width="200%" height="200%">
+                <feDropShadow dx="0" dy="1" stdDeviation="0" flood-color="#0D0905" flood-opacity="1"></feDropShadow>
+                <feDropShadow dx="1" dy="0" stdDeviation="0" flood-color="#0D0905" flood-opacity="1"></feDropShadow>
+                <feDropShadow dx="0" dy="-1" stdDeviation="0" flood-color="#0D0905" flood-opacity="1"></feDropShadow>
+                <feDropShadow dx="-1" dy="0" stdDeviation="0" flood-color="#0D0905" flood-opacity="1"></feDropShadow>
+            </filter>
+            <filter id="grayscaleFilter">
+                <feColorMatrix type="saturate" values="0"></feColorMatrix>
+                <feColorMatrix type="luminanceToAlpha" result="A"></feColorMatrix>
+            </filter>
+        </defs>
+        <line id="addNewLink" data-source="" x1="0" y1="0" x2="0" y2="0"></line>
+    </g>
+</svg>

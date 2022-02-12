@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="256.533" viewBox="0 0 210 256.533">
+  <g id="Group_273" data-name="Group 273" transform="translate(-9.066)">
+    <rect id="Rectangle_406" data-name="Rectangle 406" width="210" height="256.533" rx="33.48" transform="translate(9.066)" fill="#f7f9ff"/>
+    <rect id="Rectangle_407" data-name="Rectangle 407" width="186.396" height="125.687" rx="20.5" transform="translate(20.747 117.305)" fill="#e2e7eb"/>
+    <g id="Group_263" data-name="Group 263" transform="translate(40.08 174.427)">
+      <ellipse id="Ellipse_76" data-name="Ellipse 76" cx="5.669" cy="5.669" rx="5.669" ry="5.669" transform="translate(0 44.221)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <ellipse id="Ellipse_77" data-name="Ellipse 77" cx="5.669" cy="5.669" rx="5.669" ry="5.669" transform="translate(52.158 21.544)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <ellipse id="Ellipse_78" data-name="Ellipse 78" cx="5.669" cy="5.669" rx="5.669" ry="5.669" transform="translate(92.977 36.284)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <ellipse id="Ellipse_79" data-name="Ellipse 79" cx="5.669" cy="5.669" rx="5.669" ry="5.669" transform="translate(125.86)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <path id="Path_231" data-name="Path 231" d="M-603.106,2041.569l49.649-23.124,42.044,16.1,33.994-37.572" transform="translate(610.594 -1991.679)" fill="none" stroke="#fff" stroke-width="5"/>
+    </g>
+    <g id="Group_272" data-name="Group 272" transform="translate(75.536 43.085)">
+      <g id="Group_270" data-name="Group 270" transform="translate(0 0)">
+        <g id="Group_266" data-name="Group 266">
+          <g id="Group_264" data-name="Group 264" transform="translate(0 0)">
+            <rect id="Rectangle_408" data-name="Rectangle 408" width="20.39" height="6.19" rx="3.095" transform="translate(4.377 0) rotate(45)" fill="#6668f9"/>
+          </g>
+          <g id="Group_265" data-name="Group 265" transform="translate(0)">
+            <rect id="Rectangle_409" data-name="Rectangle 409" width="20.39" height="6.19" rx="3.095" transform="translate(18.795 4.377) rotate(135)" fill="#6668f9"/>
+          </g>
+        </g>
+        <g id="Group_269" data-name="Group 269" transform="translate(58.266)">
+          <g id="Group_267" data-name="Group 267" transform="translate(0 0)">
+            <rect id="Rectangle_410" data-name="Rectangle 410" width="20.39" height="6.19" rx="3.095" transform="translate(4.377 0) rotate(45)" fill="#6668f9"/>
+          </g>
+          <g id="Group_268" data-name="Group 268" transform="translate(0)">
+            <rect id="Rectangle_411" data-name="Rectangle 411" width="20.39" height="6.19" rx="3.095" transform="translate(18.795 4.377) rotate(135)" fill="#6668f9"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_271" data-name="Group 271" transform="translate(13.23 37.441)">
+        <path id="Path_232" data-name="Path 232" d="M-457.286,1776.085a3.111,3.111,0,0,1-2.207-.914,30.3,30.3,0,0,0-20.391-9.03,26.027,26.027,0,0,0-19.552,7.518,3.122,3.122,0,0,1-4.414,0,3.122,3.122,0,0,1,0-4.414,32.221,32.221,0,0,1,24.179-9.343,36.52,36.52,0,0,1,24.593,10.855,3.122,3.122,0,0,1,0,4.414A3.112,3.112,0,0,1-457.286,1776.085Z" transform="translate(504.765 -1759.881)" fill="#6668f9"/>
+      </g>
+    </g>
+  </g>
+</svg>

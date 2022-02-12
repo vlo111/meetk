@@ -1,0 +1,379 @@
+.ghModalHelps{
+    top: 6%;
+    position: fixed ;
+    left: 200px;
+     ol {
+      list-style: none;
+    }
+    li span{
+      color: #7166f8;
+      font-weight: 700;
+      padding: 5px;
+    }
+    .helpsSubTitle{
+      padding-left: 20px;
+    }
+    .helpMaind{
+      margin-top: 70px;
+    }
+    .exploreTitle{
+      left: -20px;
+    }
+}
+
+.help_menu {
+  color: #7166f8 !important;
+  box-shadow: none !important;
+  position: sticky;
+  top: 93%;
+  margin-bottom: 36px;
+  height: 50px;
+ 
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.HelpsModal {
+  background: #1c1d1f;
+  color: white;
+  box-sizing: border-box;
+}
+
+.react-tabs {
+  display: flex;
+  margin-left: 15px;
+  max-width: 780px;
+  width: 56%;
+  height: 87%;
+  color: white;
+  background: white;
+  margin-top: 28px;
+  box-shadow: 4px 0px 31px rgb(119 113 183 / 22%);
+  border-radius: 3px;
+  position: fixed;
+  z-index: 2;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0;
+  background: white;
+  border: none;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  left: 10px;
+  h1 {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #7166f8;
+  }
+}
+
+.react-tabs__tab {
+  border: none;
+  color: #757575;
+  height: auto;
+  width: 213px;
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: -webkit-left;
+  padding: 0px 25px;
+  margin: 0 4px;
+  line-height: 21px;
+}
+
+.react-tabs__tab:hover {
+  background: rgba(113, 102, 248, 0.1);
+  color: #7166f8;
+}
+
+.react-tabs p {
+  line-height: 20px !important;
+  position: relative;
+  top: 51px;
+  left: 5px;
+  font-size: 16px;
+  color: #7166f8;
+  font-weight: bold;
+  text-align: justify;
+
+  &:hover {
+    color: $color-main;
+    cursor: pointer;
+  }
+}
+
+.react-tabs__tab-panel {
+  padding: 0px 15px;
+  display: none;
+  width: 100%;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+  h2 {
+    font-weight: 700;
+    color: rebeccapurple;
+    font-size: 36px;
+  }
+}
+
+.panel-content {
+  text-align: center;
+}
+
+.color-border {
+  border-left: 4px solid #edecff;
+  height: 95%;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.help-rightPart {
+  margin: 0px 2px;
+  padding: 15px;
+}
+
+.btn-close {
+  position: absolute !important;
+  z-index: 9;
+  left: 92% !important;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 17px solid white;
+  border-bottom: 15px solid transparent;
+  position: fixed;
+  top: 93%;
+  left: 199px;
+}
+
+.help_img {
+  height: 290px !important;
+  position: relative;
+  top: 40px;
+  left: -4px;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.help_text {
+  outline: none;
+  position: relative;
+  color: #545454;
+  font-size: 14px;
+  padding-bottom: 2px;
+
+  ol {
+    padding: 0px 25px;
+    li {
+      text-align: -webkit-left;
+      font-size: 14px;
+      font-weight: 400;
+      text-align-last: start;
+      line-height: 25px !important;
+      b {
+        color: #7166f8 !important;
+      }
+    }
+  }
+  a {
+    display: flex;
+    position: relative;
+    top: 50px;
+    left: 70px;
+    color: #545454;
+    margin-bottom: 10px;
+  }
+  p {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+  .help_node_text {
+    top: 0px;
+    font-style: italic !important;
+    font-size: 16px;
+    font-weight: bold;
+    width: 90%;
+
+  }
+
+  .help_graph_text {
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    top: 15px;
+    left: -20px;
+  }
+  .marg_graph_text {
+    font-style: italic;
+    top: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    width: 95%;
+  }
+  .export_graph_text {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    top: 90px;
+  }
+  .link_text {
+    a {
+      position: relative !important;
+      top: 130px !important;
+      margin-bottom: 10px;
+    }
+  }
+  .export_help_text {
+    a > img {
+      position: relative;
+      left: -5px;
+    }
+    position: relative;
+    top: 50px;
+  }
+}
+
+.help_label-text {
+  position: relative;
+  color: #545454;
+  font-size: 14px;
+  -webkit-user-modify: read-write-plaintext-only;
+  padding:0 10px 2px 0;
+  li {
+    text-align: -webkit-left;
+    font-size: 14px;
+    font-weight: 400;
+    text-align-last: start;
+    position: relative;
+    top: 30px;
+    line-height: 20px !important;
+  }
+
+  p {
+    padding: 15px;
+    position: relative;
+    top: 35px;
+    left: -15px;
+  }
+}
+
+.helpMindText {
+  span {
+    color: #454545;
+    font-size: 14px;
+    top: 55px;
+    left: -56px;
+    font-weight: 700;
+    position: relative;
+  }
+  a {
+    top: 70px;
+    left: 20px;
+    display: flex;
+    position: relative;
+    color: #545454 !important ;
+    line-height: 40px;
+    cursor: context-menu;
+    img {
+      position: relative;
+      left: -15px;
+    }
+  }
+}
+
+.ghModal > .findinput > label {
+  font-size: 50px !important;
+}
+
+.helpTitle {
+  color: #7166f8;
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  top: 20px;
+  display: flex;
+  left: 9px;
+}
+.helpTitlePages {
+  color: #747474;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+  left: -20px;
+  margin-bottom: 7px;
+  line-height: 20px;
+}
+.react-tabs__tab:focus {
+  box-shadow: none;
+  border-color: none;
+  outline: none;
+}
+
+.help-text {
+  padding: 20px 0;
+  height: 720px;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  ol {
+    li {
+      color: #545454;
+      font-size: 14px;
+      padding-bottom: 2px;
+      -webkit-user-modify: read-write-plaintext-only;
+    }
+  }
+}
+.help-text ul li {
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: auto auto 20px;
+}
+.help-text ul li div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: end;
+}
+.help-text ul li div span {
+  margin-left: 13px;
+  border: 2px solid #dfdfdf;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 4px 6px;
+  color: #757575;
+  width: 46px;
+}
+.HelpCommand {
+  color: #424242;
+  font-size: 14px;
+  font-weight: 700;
+  display: grid;
+  justify-self: start;
+}
+.helpResultText{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  top: 60px;
+  height: 50%;
+  max-height: 380px;
+}
+.shotcouts{
+  height: 100%;
+  max-height: 100%;
+}

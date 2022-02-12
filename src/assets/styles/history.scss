@@ -1,0 +1,110 @@
+.graphUsersInfoOverlay {
+  .graphUsersInfo {
+    padding: 30px 20px 20px;
+    min-width: 900px;
+    min-height: 350px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .close {
+      position: absolute;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .table {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      font-size: .8rem;
+      margin: 0.5rem;
+      line-height: 1.5;
+      flex: 1 1 auto;
+      align-items: flex-start;
+      overflow-y: hidden;
+      padding-bottom: 230px;
+
+    }
+
+    .row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+      width: 100%;
+      border-bottom: solid 1px #727272;
+      font-weight: 300;
+
+      .item {
+        flex: 2;
+        padding: 10px;
+        display: flex;
+        color: black;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+
+        .userName {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 11px;
+          margin: 5px;
+          font-size: 16px;
+          margin-top: 6px;
+        }
+        img {
+          height: 50px !important;
+          width: 50px !important;
+        }
+        &.sm {
+          flex: 1;
+        }
+
+        &.lg {
+          flex: 3;
+        }
+
+      }
+
+      &.header {
+        position: sticky;
+        top: 10px;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(202, 198, 240, 0.11);
+        min-height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-radius: 3px
+      }
+
+      .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        padding-left: 31px;
+      }
+
+      .node-name {
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: $color-main;
+      }
+
+    }
+    .all-count {  
+      font-size: 12px !important;
+      line-height: 16px !important;
+      color: $color-border;
+    }
+  }
+}

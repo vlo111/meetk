@@ -1,0 +1,205 @@
+/* History View */ 
+
+#revisions {
+  position: relative;
+  margin: 12px 40px 12px 15px;
+}
+#revisions a {
+  color: white;
+}
+#revisions a:hover {
+  text-decoration: underline;
+}
+#revisions table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Play controls */
+
+#revisions .label {
+  line-height: 20px;
+  padding-right: 12px;
+}
+
+#revisions .l-table-col {
+  width: 33%;
+}
+
+#rvspeed * {
+  float: left;
+}
+#rvspeed .slider .track {
+  background-color: #aab3b8;
+}
+#rvspeed .slider_wrapper span {
+  color: #aab3b8;
+}
+
+#rv_controlcolor {
+  width: 120px;
+}
+.controls a {
+  width: 32px;
+  height: 32px;
+  background-position: center center;
+  background-size: 16px auto;
+}
+ 
+
+#rvsettings {
+  text-align: right;
+}
+
+/* bg bar and track with bullets */
+
+#rvbar,
+#rvtrack {
+  position: absolute;
+  top: 40px;
+}
+#rvbar {
+  background-color: white;
+  border-radius: 6px;
+}
+#rvbar td {
+  width: 50%;
+  height: 50px;
+}
+#rvtrack {
+  left: 0;
+  height: 50px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.b-ff #rvtrack {
+  margin-left: 23px;
+}
+#rvindicator {
+  transform: rotate(180deg);
+  overflow: hidden;
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
+}
+#rvlist {
+  height: 65px;
+}
+#rvlist li {
+  display: block;
+  float: left;
+  cursor: default;
+  padding: 12px 5px 0 5px;
+  border-right: 1px solid 6px;
+  text-align: center;
+}
+#rvlist li:last-child {
+  border: none;
+}
+#rvlist div {
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#rvlist .separator {
+  background-color: white;
+  width: 1px;
+  margin-top: 40px;
+  height: 21px;
+  float: left;
+  padding: 0;
+}
+#rvlist b,
+#rvchange b {
+  display: inline-block;
+  height: 12px;
+  min-width: 12px;
+  width: 12px;
+  margin: 2px 5px 0 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 6px;
+}
+#rvchange b {
+  border: 1px solid white;
+  margin: 0 7px 0px 4px;
+}
+#rvlist span.title {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  color: rgb(255, 64, 25);
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+}
+#rvchange em {
+  font-style: normal;
+  white-space: pre-wrap;
+}
+#rvchange .username {
+  font-weight: bold;
+}
+#rvchange .username:after {
+  content: ' ';
+}
+#rvchange .change {
+  display: flex;
+  align-items: center;
+}
+#rvchange .change:before {
+  content: ' "';
+}
+#rvchange .change:after {
+  content: '"';
+}
+
+/* Info bar with revert button */
+
+#rvinfo {
+  position: absolute;
+  height: 36px;
+  top: 108px;
+}
+#rvinfo * {
+  box-sizing: border-box;
+}
+#rvinfo td {
+  vertical-align: middle;
+  padding: 0 5px;
+}
+#rvinfo td.c {
+  text-align: center;
+}
+#rvinfo td.r {
+  text-align: right;
+}
+
+#history_load_more {
+  color: rgb(255, 64, 25) !important;
+  float: left;
+  margin: 30px 0 0;
+  font-weight: bold;
+  font-size: 0.8em;
+  position: absolute;
+}
+#btn_revert {
+  margin: 0 15px;
+}
+#rv_view_all {
+  text-decoration: underline;
+}
+
+
+.status span:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: #e8eeff;
+  border-radius: 25px;
+  border: 4px solid #3e70ff;
+  position: absolute;
+  top: -15px;
+  left: calc(50% - 12px); // align circle to center
+  transition: all 200ms ease-in;
+}

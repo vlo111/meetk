@@ -1,0 +1,267 @@
+.analyticBottomPage {
+  width: 44%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  right: 0;
+
+  .close {
+    position: fixed;
+    right: 285px;
+    left: 25px;
+    top: 0;
+    z-index: 2;
+    display: none;
+
+    .icon {
+      width: 12px;
+    }
+  }
+
+  .analitycBack {
+    top: -130px;
+    position: fixed;
+    z-index: 999999;
+  }
+
+  .bottomTool {
+    position: fixed;
+    bottom: 2%;
+    right: 45%;
+    display: flex;
+
+    div {
+      margin-left: 10px;
+    }
+
+    #autoPlay {
+      position: initial;
+      right: 0;
+    }
+
+    .graphControlPanel {
+      padding-right: 5px;
+      right: 0;
+      position: initial;
+    }
+  }
+
+  .analyticContainer {
+    display: grid;
+    grid-template-rows: 35%  39%  26%;
+    max-width: 100%;
+    overflow: hidden auto;
+    height: calc(100% - 0.1px);
+    background-color: white;
+
+    .localAnalyse {
+      padding-left: 20px;
+      line-height: 25px;
+      display: grid !important;
+      grid-template-columns: 33% 33% 33%;
+
+      .componentContainer {
+        height: 230px;
+
+        .componentsData {
+          overflow: auto;
+          height: 200px;
+        }
+      }
+
+      h3 {
+        font-weight: 600;
+        color: #da9393;
+        font-size: 15px;
+        width: 100px;
+      }
+
+      strong {
+        color: #717EA0;
+        font-weight: 600;
+      }
+    }
+
+    .localAnalyse > div {
+      margin: 6px;
+    }
+
+    .pieChart {
+      padding-top: 20px;
+      display: grid !important;
+      grid-template-rows: 2% 90% 8%;
+
+      .headerPie {
+        text-align: center;
+        font-size: 15px;
+        color: #717ea0;
+      }
+
+      .piePanel {
+        margin-top: -10px;
+
+      }
+
+      .footerPie {
+        padding-left: 30px;
+        display: flex;
+        padding-top: 5px;
+
+        .dot {
+          display: none;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+        }
+
+        .selectedText {
+          font-size: 14px;
+          margin-left: 5px;
+          display: flex;
+          margin-top: -4px;
+
+          > * {
+            margin-right: 8px;
+          }
+
+          p {
+            font-weight: 600;
+            color: #717ea0;
+          }
+
+          span {
+            font-style: italic;
+          }
+        }
+      }
+
+      .recharts-pie-sector {
+        cursor: pointer;
+      }
+    }
+
+    .containerBarChart {
+      display: grid;
+      grid-template-rows: 0% 87%;
+      .headerTextDegreeBlock, .bottomTextDegreeBlock, .leftTextDegreeBlock {
+        position: relative;
+      left: 64px;
+
+        h4 {
+          font-size: 15px;
+          color:
+          #7166F8;
+        }
+      }
+
+      .bottomTextDegreeBlock {
+        margin-top: -10px;
+      }
+      .barContainer {
+        display: grid;
+        grid-template-columns: 1% 99%;
+
+        .recharts-responsive-container {
+          width: 80% !important;
+        }
+
+      }
+
+      .headerTextDegreeBlock {
+        margin-top: 11px;
+      }
+
+      .leftTextDegreeBlock {
+        position: static;
+        padding-left: 30px;
+        margin-top: 20px;
+
+        h4 {
+          transform: translate(5px, 170px) rotate(
+                          270deg
+          );
+        }
+      }
+    }
+  }
+
+  .recharts {
+    position: absolute !important;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+  }
+
+  .recharts-tooltip-wrapper {
+    .custom-tooltip {
+      background-color: white;
+      border-radius: 14px;
+      padding: 25px;
+      opacity: 0.8;
+
+      .more {
+        margin-left: 5%;
+      }
+
+      .tooltipHover {
+        display: flex;
+        align-items: center;
+      }
+
+      .tooltipHover > div {
+        margin: 6px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 35px;
+      }
+
+      .circle {
+        clip-path: circle(50%);
+        height: 1em;
+        width: 1em;
+      }
+    }
+  }
+
+  .recharts-surface {
+    .recharts-tooltip-cursor {
+      fill: #96969629;
+    }
+  }
+  .pieChart .recharts-surface{
+        padding: 20px 50px 2px 50px;
+
+  }
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+  padding-left: 0;
+}
+
+.analyticRightPage {
+  position: fixed;
+  top: 5px;
+  left: 30px;
+  right: 0;
+  height: auto;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  transition: all 0.6s ease-in-out 0s;
+  transform-origin: left top;
+  transform: scaleY(0);
+
+
+
+  .container {
+    display: table-cell;
+    line-height: 50px;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-top: 30px;
+    color: #7166F8;
+  }
+}
