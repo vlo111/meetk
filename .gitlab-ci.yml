@@ -1,0 +1,18 @@
+development_job:
+  stage: deploy
+  only:
+    - develop
+
+  before_script:
+    # Generate SSH Key
+    - mkdir -p ~/.ssh
+    - echo "$PROD_SSH_PRIVATE" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+  script:
+    - bash .deploy-development.sh
+
+  environment:
+    name: development
+    url: https://d-meetk.analysed.ai/

@@ -1219,7 +1219,7 @@ class ChartUtils {
     const cx = (maxX - minX) / 2;
     const cy = (maxY - minY) / 2;
 
-    return [minX + cx, minY + cy]
+    return [minX + cx, minY + cy];
   }
 
   static getNodeParams = (target) => {
@@ -1227,52 +1227,84 @@ class ChartUtils {
 
     const { width, height } = target.node().getBBox();
 
-    return {x, y, width, height};
+    return {
+      x, y, width, height,
+    };
   }
 
   static getNodePoints(node) {
-    let {x, y, width, height} = this.getNodeParams(node);
+    let {
+      x, y, width, height,
+    } = this.getNodeParams(node);
 
-    x = x - (width / 2);
+    x -= (width / 2);
 
-    const nodeXPoints = _.range(x, x + width)
-    const nodeYPoints = _.range(y, y + height)
+    if (node.node().__data__.icon) {
+      y -= (height / 2);
+    }
+
+    const nodeXPoints = _.range(x, x + width);
+    const nodeYPoints = _.range(y + 2, y + 2 + height);
 
     return [nodeXPoints, nodeYPoints];
   }
 
   static nodeRadianseCoordinate(index, centerX, centerY) {
-    const target = Chart.node.filter(n => n.index === index)
+    const target = Chart.node.filter((n) => n.index === index);
 
     const [nodeXPoints, nodeYPoints] = this.getNodePoints(target);
 
-    const findClosest = (arr = [], target = 1) => {
-      const size = 2;
-      return arr.sort((a, b) => {
-        const distanceA = Math.abs(a - target)
-        const distanceB = Math.abs(b - target)
-        if (distanceA === distanceB) {
-          return a - b
-        }
-        return distanceA - distanceB
-      }).slice(0, size)
-          .sort((a, b) => a - b);
-    };
+    const clossestX = this.findClosest(nodeXPoints, centerX);
+    const clossestY = this.findClosest(nodeYPoints, centerY);
 
-    const clossestX = findClosest(nodeXPoints, centerX);
-    const clossestY = findClosest(nodeYPoints, centerY);
-
-    return [clossestX[0], clossestY[0]]
+    return [clossestX[0], clossestY[0]];
   }
 
   static offsetLinkCenter(sourceIndex, targetIndex, originaLinkCenterX, originaLinkCenterY) {
-
     const [sourceOffsetX, sourceOffsetY] = this.nodeRadianseCoordinate(sourceIndex, originaLinkCenterX, originaLinkCenterY);
 
     const [targetOffsetX, targetOffsetY] = this.nodeRadianseCoordinate(targetIndex, originaLinkCenterX, originaLinkCenterY);
 
+    return [(sourceOffsetX + targetOffsetX) / 2, (sourceOffsetY + targetOffsetY) / 2];
+  }
 
-    return[(sourceOffsetX + targetOffsetX) / 2, (sourceOffsetY + targetOffsetY) / 2]
+  static linkSplitCenter(linktext, sourceIndex, targetIndex, centerX, centerY) {
+    const {
+      x, y, width, height,
+    } = linktext.node().getBBox();
+
+    const textXPoints = _.range(x, x + width + 2);
+    const textYPoints = _.range(y, y + height + 2);
+
+    const [sourceOffsetX, sourceOffsetY] = this.nodeRadianseCoordinate(sourceIndex, centerX, centerY);
+
+    const [targetOffsetX, targetOffsetY] = this.nodeRadianseCoordinate(targetIndex, centerX, centerY);
+
+    const textWithSourceX = this.findClosest(textXPoints, sourceOffsetX)[0];
+    const textWithSourceY = this.findClosest(textYPoints, sourceOffsetY)[0];
+
+    const textWithTargetX = this.findClosest(textXPoints, targetOffsetX)[0];
+    const textWithTargetY = this.findClosest(textYPoints, targetOffsetY)[0];
+
+    return [
+      textWithSourceX,
+      textWithSourceY,
+      textWithTargetX,
+      textWithTargetY,
+    ];
+  }
+
+  static findClosest(arr = [], target = 1) {
+    const size = 2;
+    return arr.sort((a, b) => {
+      const distanceA = Math.abs(a - target);
+      const distanceB = Math.abs(b - target);
+      if (distanceA === distanceB) {
+        return a - b;
+      }
+      return distanceA - distanceB;
+    }).slice(0, size)
+      .sort((a, b) => a - b);
   }
 }
 

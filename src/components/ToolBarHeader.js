@@ -102,27 +102,22 @@ class ToolBarHeader extends Component {
 
     return (
       <>
-        <header id={!updateLocation ? '' : 'header-on-graph-name'}>
+        <header id={!updateLocation ? 'header-create' : 'header-on-graph-name'}>
           <div>
-            {updateLocation && (
             <GraphSvg className="headerSvg" />
-            )}
           </div>
 
           <div className="grapSanme">
             {' '}
-            {updateLocation ? (
               <span className="graphsName">{singleGraph.title}</span>
-            ) : null}
             {!updateLocation && (
             <span className="graphNames">
               {Utils.substr(singleGraph.title, 16)}
             </span>
-            )}
+          )} 
           </div>
 
           <div className="commentsHeader">
-            {updateLocation && (
             <div className="commentHeader">
               <Button
                 icon={<CommentSvg />}
@@ -131,7 +126,6 @@ class ToolBarHeader extends Component {
                 title="Comments"
               />
             </div>
-            )}
           </div>
           <div className="notify_container">
             <div className="notificationHeader">
@@ -143,17 +137,14 @@ class ToolBarHeader extends Component {
               <AccountDropDown />
             </div>
           </div>
-          {updateLocation && (
           <div className="notify_container">
             <div className="notificationHeader">
               <Notification />
             </div>
           </div>
-           )}
         </header>
         <header id={!updateLocation ? 'header-on-view-graph' : 'header-on-graph'}>
           <ul className="container">
-
             <li className="logo">
               <Link to="/" className="logoWrapper">
                 <UndoSvg className="orange" />

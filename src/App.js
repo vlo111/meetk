@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ToastContainer, Slide as ToastSlide } from 'react-toastify';
 import GraphForm from './pages/GraphForm';
 import SignIn from './pages/sign/SignIn';
-import SignUp from './pages/sign/SignUp'
+import SignUp from './pages/sign/SignUp';
 import GraphView from './pages/GraphView';
 import SignOut from './pages/sign/SignOut';
 import GraphDrafts from './pages/profile/GraphDrafts';

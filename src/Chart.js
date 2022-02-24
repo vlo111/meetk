@@ -2227,35 +2227,17 @@ class Chart {
         arcDirection = d.same.arcDirection;
       }
 
-      // return `
-      // M${sourceX},${sourceY}
-      // A${arc},${arc} 0 0,
-      // ${arcDirection} ${targetX},${targetY}
-      // `;
-
       const [centerNodeSource, centerNodeTarget] = this.nodeCenter(source, target);
 
       const [centerX, centerY] = ChartUtils.linkCenter(sourceX, targetX, centerNodeSource, centerNodeTarget);
 
       const [sourceOffsetX, sourceOffsetY] = ChartUtils.nodeRadianseCoordinate(source.index, centerX, centerY);
 
-      let [targetOffsetX, targetOffsetY] = ChartUtils.nodeRadianseCoordinate(target.index, centerX, centerY);
+      const [targetOffsetX, targetOffsetY] = ChartUtils.nodeRadianseCoordinate(target.index, centerX, centerY);
 
-      const [offsetCenterX, offsetCenterY] = ChartUtils.offsetLinkCenter(source.index, target.index, centerX, centerY)
-
-      return `
-         M ${sourceOffsetX} ${sourceOffsetY}
-         L ${offsetCenterX} ${offsetCenterY}
-         L ${offsetCenterX} ${offsetCenterY}
-         L ${sourceOffsetX} ${sourceOffsetY} 
-         Z          
-
-         M ${targetOffsetX} ${targetOffsetY}
-         L ${offsetCenterX} ${offsetCenterY}
-         L ${offsetCenterX} ${offsetCenterY}
-         L ${targetOffsetX} ${targetOffsetY}
-         Z
-      `;
+      return `M${sourceOffsetX},${sourceOffsetY}
+      A${arc},${arc} 0 0,${arcDirection} 
+      ${targetOffsetX},${targetOffsetY}`;
     });
     this.node
       .attr('transform', (d) => {
@@ -2273,27 +2255,11 @@ class Chart {
       .attr('class', ChartUtils.setClass((d) => ({ auto: d.vx !== 0 })));
 
     this.linkText
-        .attr('x', (d) =>{
-          const [centerNodeSource, centerNodeTarget] = this.nodeCenter(d.source, d.target);
-
-          const [centerX, centerY] = ChartUtils.linkCenter(d.source.x, d.target.x, centerNodeSource, centerNodeTarget);
-
-          const [x,] = ChartUtils.offsetLinkCenter(d.source.index, d.target.index, centerX, centerY)
-
-          return x;
-        })
-        .attr('y', (d) =>{
-          const [centerNodeSource, centerNodeTarget] = this.nodeCenter(d.source, d.target);
-
-          const [centerX, centerY] = ChartUtils.linkCenter(d.source.x, d.target.x, centerNodeSource, centerNodeTarget);
-
-          const [, y] = ChartUtils.offsetLinkCenter(d.source.index, d.target.index, centerX, centerY)
-
-          return y;
-        })
+      .attr('dy', (d) => (ChartUtils.linkTextLeft(d) ? 17 + +d.value / 2 : (5 + +d.value / 2) * -1))
+      .attr('transform', (d) => (ChartUtils.linkTextLeft(d) ? 'rotate(180)' : undefined));
 
     this.directions
-      .attr('dx', 5);
+      .attr('dx', 0);
 
     this._dataNodes = null;
     this._dataLinks = null;
@@ -2519,57 +2485,22 @@ class Chart {
       .join('text')
       .attr('text-anchor', 'middle')
       .attr('fill', '#585858')
-        .attr('x', (d) =>{
-          const [centerNodeSource, centerNodeTarget] = this.nodeCenter(d.source, d.target);
+      .attr('dy', (d) => (ChartUtils.linkTextLeft(d) ? 17 + (d.value || 1) / 2 : (5 + (d.value || 1) / 2) * -1))
+      .attr('transform', (d) => (ChartUtils.linkTextLeft(d) ? 'rotate(180)' : undefined));
 
-          const [centerX, centerY] = ChartUtils.linkCenter(d.source.x, d.target.x, centerNodeSource, centerNodeTarget);
+    this.linkText.append('textPath')
+      .attr('startOffset', '50%')
+      .attr('href', (d) => `#l${d.index}`)
+      .text((d) => {
+        if (d.total > 1) {
+          return ` ${d.total} `;
+        }
+        if (d.status === 'draft') {
+          return `  DRAFT ( ${d.type} ) `;
+        }
 
-          const [x,] = ChartUtils.offsetLinkCenter(d.source.index, d.target.index, centerX, centerY)
-
-          return x;
-        })
-        .attr('y', (d) =>{
-          const [centerNodeSource, centerNodeTarget] = this.nodeCenter(d.source, d.target);
-
-          const [centerX, centerY] = ChartUtils.linkCenter(d.source.x, d.target.x, centerNodeSource, centerNodeTarget);
-
-          const [, y] = ChartUtils.offsetLinkCenter(d.source.index, d.target.index, centerX, centerY)
-
-          return y;
-        })
-      .attr('dy', (d) => 3 + +d.value / 2)
-        .text((d) => {
-      if (d.total > 1) {
-        return ` ${d.total} `;
-      }
-      if (d.status === 'draft') {
-        return `  DRAFT ( ${d.type} ) `;
-      }
-
-      return ` ${d.type} `;
-    });
-
-    // this.linkText.append('textPath')
-    //   .attr('startOffset', '50.5%')
-    //   .attr('href', (d) => `#l${d.index}`)
-    //   .style('stroke', '#e5e5e5')
-    //   .style('stroke-width', '0.6em')
-    //   .text((d) => new Array(d.type.length * 2).join('|'));
-
-    // this.linkText.append('textPath')
-    //   .attr('startOffset', '50%')
-    //   .attr('href', (d) => `#l${d.index}`)
-    //   .text((d) => {
-    //     if (d.total > 1) {
-    //       return ` ${d.total} `;
-    //     }
-    //     if (d.status === 'draft') {
-    //       return `  DRAFT ( ${d.type} ) `;
-    //     }
-    //
-    //     return ` ${d.type} `;
-    //   });
-
+        return ` ${d.type} `;
+      });
     this.link
       .attr('stroke-width', (d) => (linkIndexes.includes(d.index) ? +d.value + 1.5 : +d.value || 1));
 
@@ -2590,7 +2521,8 @@ class Chart {
       .join('text')
       .attr('text-anchor', 'middle')
       .attr('fill', ChartUtils.linkDraftColor)
-      .attr('dy', (d) => 3 + +d.value / 2)
+      .attr('dy', (d) => (ChartUtils.linkTextLeft(d) ? 17 + d.value / 2 : (5 + d.value / 2) * -1))
+      .attr('transform', (d) => (ChartUtils.linkTextLeft(d) ? 'rotate(180)' : undefined));
 
     this.linkText.append('textPath')
       .attr('startOffset', '50%')
@@ -3347,8 +3279,8 @@ class Chart {
   }
 
   static nodeCenter(source, target) {
-    const nodeSource = this.node.filter(n => n.index === source.index);
-    const nodeTarget = this.node.filter(n => n.index === target.index);
+    const nodeSource = this.node.filter((n) => n.index === source.index);
+    const nodeTarget = this.node.filter((n) => n.index === target.index);
 
     const heightSource = nodeSource.node().getBBox().height;
 

@@ -321,13 +321,9 @@ class ReactChart extends Component {
                 <feDropShadow dx="-1" dy="0" stdDeviation="0" floodColor="#0D0905" floodOpacity="1" />
                 <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor="#0d090554" floodOpacity="1" />
               </filter>
-
               <filter id="grayscaleFilter">
                 <feColorMatrix type="saturate" values="0" />
                 <feColorMatrix type="luminanceToAlpha" result="A" />
-              </filter>
-              <filter x="0" y="0" width="1" height="1" id="solid">
-                <feFlood floodColor="seagreen" floodOpacity="0.5" />
               </filter>
               <SelectedNodeFilter />
               <LabelLock />

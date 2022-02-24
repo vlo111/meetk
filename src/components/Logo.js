@@ -4,7 +4,7 @@ class Logo extends Component {
   render() {
     return (
       <div id="logo">
-        ARAKS
+        Meetk
       </div>
     );
   }

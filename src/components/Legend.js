@@ -36,8 +36,8 @@ class Legend extends Component {
         this.props.getSingleGraphRequest(id, { viewMode: true, rendering: false });
         const play = document.getElementById('autoPlay');
         const panel = document.getElementById('graphControlPanel');
-        play.style.right = '310px';
-        panel.style.right = '310px';
+        play.style.right = '29px';
+        panel.style.right = '29px';
       }
 
       this.setState({

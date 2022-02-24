@@ -1736,6 +1736,19 @@ p {
 
         }
     }
+    #header-create{
+      position: static;
+      .headerSvg, .commentsHeader{
+        display: none;
+      }
+      .account{
+        width: 100%;
+      }
+      .notification{
+        top: 17px;
+        right: 18%;
+      }
+    }
     .accountInfo{
       position: absolute;
       width: 12% !important;
@@ -1748,7 +1761,7 @@ font-size: 14px !important;     }
    .notification-container{
     right: 30%;
     position: absolute;
-    top: 5px;
+    top: 17px;
     z-index: 1;
     svg{
       stroke: white;
@@ -7544,7 +7557,6 @@ img.preview-scaled {
       font-size: 16px;
       font-weight: 400;
       border-radius: 2px;
-      /* border: solid 1px #7166F8; */
       border-color: #2FE6FF;
       color: #2FE6FF;
       line-height: normal;
@@ -7641,7 +7653,7 @@ img.preview-scaled {
       top: 80px;
       right: 11px;
       height: auto;
-      max-height: 97%;
+      max-height: 80%;
      }
   }
 
@@ -7923,15 +7935,12 @@ li span{
   background: #EFEFEF;
   top: 40px;
 
-  .header-right-panel {
-    .commentHeader,
-    .cursor-header,
-                  {
+  .header-right-panel .commentHeader, .cursor-header {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-  }
+  
 
   .container > li {
     padding-top: 3px;
@@ -8060,11 +8069,12 @@ li span{
     height: 18px;
   }
  }
-#header-on-graph-name{
+ 
+#header-on-graph-name, #header-create{
   position: fixed;
   width: 100%;
-  height: 40px;
   background-color: #333333;
+  z-index: 1;
   .account{
     position: absolute;
     top: 7px;
@@ -10483,3 +10493,7 @@ width: 30px;
   }
 }
 }
+
+
+
+
