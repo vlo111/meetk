@@ -220,7 +220,7 @@ const AddNodeModal = ({ ariaHideApp }) => {
           <div className="node-type">
             <Select
               label="Node Type"
-              limit={50}
+              // limit={50}
               isCreatable
               value={[
                 getTypes.find((t) => t.value === nodeData.type) || {
@@ -236,7 +236,7 @@ const AddNodeModal = ({ ariaHideApp }) => {
           <Input
             containerClassName="nodeName"
             label="Node Name"
-            limit={50}
+            // limit={50}
             value={nodeData.name}
             error={errors.name}
             autoFocus
